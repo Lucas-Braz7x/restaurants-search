@@ -6,7 +6,7 @@ import Slider from "react-slick";
 
 import logo from '../../assets/logo.svg';
 import restaurants from '../../assets/restaurante-fake.png';
-import { Card } from '../../components';
+import { Card, RestaurantCard } from '../../components';
 
 import { Wrapper, ContainerSearch, Logo, Search, CarouselTitle, Carousel, ContainerMap } from './styles';
 
@@ -37,16 +37,17 @@ const Home = () => {
             />
           </TextField>
           <CarouselTitle>Na sua Área</CarouselTitle>
+          <Carousel {...settings}>
+            <Card photo={restaurants} title="Meu restaurante pika" />
+            <Card photo={restaurants} title="Meu restaurante pika"/>
+            <Card photo={restaurants} title="Meu restaurante pika"/>
+            <Card photo={restaurants} title="Meu restaurante pika"/>
+            <Card photo={restaurants} title="Meu restaurante pika"/>
+            <Card photo={restaurants} title="Meu restaurante pika"/>
+            <Card photo={restaurants} title="Meu restaurante pika"/>
+          </Carousel>
         </Search>
-        <Carousel {...settings}>
-          <Card photo={restaurants} title="Meu restaurante pika" />
-          <Card photo={restaurants} title="Meu restaurante pika"/>
-          <Card photo={restaurants} title="Meu restaurante pika"/>
-          <Card photo={restaurants} title="Meu restaurante pika"/>
-          <Card photo={restaurants} title="Meu restaurante pika"/>
-          <Card photo={restaurants} title="Meu restaurante pika"/>
-          <Card photo={restaurants} title="Meu restaurante pika"/>
-        </Carousel>
+        <RestaurantCard />
       </ContainerSearch>
       <ContainerMap></ContainerMap>
     </Wrapper>
