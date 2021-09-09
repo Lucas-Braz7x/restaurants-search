@@ -1,13 +1,25 @@
 import React, { useState } from 'react';
+
 import TextField, { Input } from '@material/react-text-field';
 import MaterialIcon from '@material/react-material-icon';
+import Slider from "react-slick";
 
 import logo from '../../assets/logo.svg';
+import restaurants from '../../assets/restaurante-fake.png';
+import { Card } from '../../components';
 
-import {ContainerMap, ContainerSearch, Logo, Search, Wrapper } from './styles';
+import { Wrapper, ContainerSearch, Logo, Search, CarouselTitle, Carousel, ContainerMap } from './styles';
 
 const Home = () => {
   const [inputValue, setInputValue] = useState('');
+  let settings = {
+    dots: false,
+    infinite: true,
+    speed: 350,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    adaptiveHeight: true,
+  };
   return (
     <Wrapper>
       <ContainerSearch>
@@ -24,7 +36,17 @@ const Home = () => {
               onChange={(e) => setInputValue(e.target.value) }
             />
           </TextField>
+          <CarouselTitle>Na sua Área</CarouselTitle>
         </Search>
+        <Carousel {...settings}>
+          <Card photo={restaurants} title="Meu restaurante pika" />
+          <Card photo={restaurants} title="Meu restaurante pika"/>
+          <Card photo={restaurants} title="Meu restaurante pika"/>
+          <Card photo={restaurants} title="Meu restaurante pika"/>
+          <Card photo={restaurants} title="Meu restaurante pika"/>
+          <Card photo={restaurants} title="Meu restaurante pika"/>
+          <Card photo={restaurants} title="Meu restaurante pika"/>
+        </Carousel>
       </ContainerSearch>
       <ContainerMap></ContainerMap>
     </Wrapper>
