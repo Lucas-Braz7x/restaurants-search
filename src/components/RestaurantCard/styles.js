@@ -46,6 +46,11 @@ export const RestaurantsPhoto = styled.img`
   width: 100px;
   height: 100px;
 
+  margin-right: 5px;
   border-radius: 16px;
   object-fit: cover;
+  transition: transform .6s;
+  :hover{
+    transform: scale(0.9);
+  }
 `;

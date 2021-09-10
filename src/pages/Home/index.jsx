@@ -6,12 +6,13 @@ import Slider from "react-slick";
 
 import logo from '../../assets/logo.svg';
 import restaurants from '../../assets/restaurante-fake.png';
-import { Card, RestaurantCard } from '../../components';
+import { Card, RestaurantCard, Modal } from '../../components';
 
 import { Wrapper, ContainerSearch, Logo, Search, CarouselTitle, Carousel, ContainerMap } from './styles';
 
 const Home = () => {
   const [inputValue, setInputValue] = useState('');
+  const [modalOpened, setModalOpened] = useState(false);
   let settings = {
     dots: false,
     infinite: true,
@@ -50,6 +51,10 @@ const Home = () => {
         <RestaurantCard />
       </ContainerSearch>
       <ContainerMap></ContainerMap>
+      <Modal
+        open={modalOpened}
+        onClose={() => setModalOpened(!modalOpened)}
+      />
     </Wrapper>
   );
 };
