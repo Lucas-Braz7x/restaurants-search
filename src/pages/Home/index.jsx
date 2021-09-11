@@ -6,7 +6,7 @@ import Slider from "react-slick";
 
 import logo from '../../assets/logo.svg';
 import restaurants from '../../assets/restaurante-fake.png';
-import { Card, RestaurantCard, Modal } from '../../components';
+import { Card, RestaurantCard, Modal, Map } from '../../components';
 
 import { Wrapper, ContainerSearch, Logo, Search, CarouselTitle, Carousel, ContainerMap } from './styles';
 
@@ -50,7 +50,7 @@ const Home = () => {
         </Search>
         <RestaurantCard />
       </ContainerSearch>
-      <ContainerMap></ContainerMap>
+      <Map />
       <Modal
         open={modalOpened}
         onClose={() => setModalOpened(!modalOpened)}
