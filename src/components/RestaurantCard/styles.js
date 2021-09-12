@@ -6,7 +6,6 @@ export const Restaurant = styled.div`
 
   cursor: pointer;
 
-
   margin-top: 5px;
   padding: 16;
 
@@ -22,7 +21,6 @@ export const Restaurant = styled.div`
 export const RestaurantInfo = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
 `;
 
 export const Title = styled.p`
@@ -43,8 +41,8 @@ margin: 10px 0;
 `;
 
 export const RestaurantsPhoto = styled.img`
-  width: 100px;
-  height: 100px;
+  width: 100px !important;
+  height: 100px !important;
 
   margin-right: 5px;
   border-radius: 16px;
