@@ -16,3 +16,4 @@ Restaurants search é uma aplicação construida com React, que tem como intuito
 
 ### `npm start`
 
+##
